@@ -19,7 +19,7 @@ def cargar(encabezados):
     lista_usuarios = []
     lista_usuarios.append(encabezados)
     while guardar == 's':
-        usuario = {}
+        usuario = []
         for encabezado in encabezados:
             dato = input(f"Ingrese {encabezado} del usuario: ")
             if encabezado == encabezados[0]:
@@ -28,8 +28,7 @@ def cargar(encabezados):
                 except:
                     print("Los legajos deben ser numeros enteros")
                     dato = input(f"Ingrese {encabezado} del usuario: ")
-
-            usuario[encabezado] = dato
+            usuario.append(dato)
         guardar = input("Quiere seguir agregando usuarios? s/n ")
         lista_usuarios.append(usuario)
     try:
